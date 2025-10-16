@@ -27,10 +27,10 @@ There are currently no automated tests in the repo. If you add tests, please inc
 
 Prebuilds and binary artifacts
 
-This mono-repo contains two packages: `@lumix/ffmpeg` and `@lumix/ffmpeg-binaries`.
+This mono-repo contains two packages: `@lumixland/ffmpeg` and `@lumixland/ffmpeg-binaries`.
 
-- `@lumix/ffmpeg` is the TypeScript wrapper. It is built by the top-level `build` script.
-- `@lumix/ffmpeg-binaries` contains bundled FFmpeg binaries for supported platforms.
+- `@lumixland/ffmpeg` is the TypeScript wrapper. It is built by the top-level `build` script.
+- `@lumixland/ffmpeg-binaries` contains bundled FFmpeg binaries for supported platforms.
 
 We provide a GitHub Actions workflow that creates prebuild artifacts (zipped binaries) and attaches them to a GitHub Release or uploads them as artifacts. To reproduce locally, build the `ffmpeg-binaries` package and prepare the same zipped structure as included in `packages/ffmpeg-binaries/bin`.
 

@@ -1,4 +1,4 @@
-# @lumix/ffmpeg-binaries
+# @lumixland/ffmpeg-binaries
 
 Prebuilt FFmpeg binaries packaged for Node.js consumption.
 
@@ -7,7 +7,7 @@ Purpose
 This package bundles prebuilt FFmpeg executables for major platforms and exposes the resolved binary path via `ffmpegPath`:
 
 ```js
-import { ffmpegPath } from "@lumix/ffmpeg-binaries";
+import { ffmpegPath } from "@lumixland/ffmpeg-binaries";
 console.log(ffmpegPath);
 ```
 
@@ -21,7 +21,7 @@ Installation
 Install as a dependency in projects that want the bundled binary available at runtime:
 
 ```powershell
-pnpm add @lumix/ffmpeg-binaries
+pnpm add @lumixland/ffmpeg-binaries
 ```
 
 Licensing

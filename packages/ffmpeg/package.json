@@ -1,5 +1,5 @@
 {
-  "name": "@lumix/ffmpeg",
+  "name": "@lumixland/ffmpeg",
   "version": "0.1.0",
   "description": "A lightweight, dependency-free Node.js FFmpeg wrapper for fast and simple audio/video conversion.",
   "type": "module",
@@ -21,10 +21,10 @@
     "lint": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@lumix/ffmpeg-binaries": "workspace:*"
+    "@lumixland/ffmpeg-binaries": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@lumix/ffmpeg-binaries": {
+    "@lumixland/ffmpeg-binaries": {
       "optional": true
     }
   },

@@ -1,27 +1,27 @@
-# @lumix/ffmpeg
+# @lumixland/ffmpeg
 
 A lightweight, dependency-light TypeScript wrapper for running FFmpeg from Node.js.
 
 Highlights
 
 - Automatically prefers a system `ffmpeg` if available.
-- Falls back to an optional `@lumix/ffmpeg-binaries` package that ships prebuilt platform binaries.
+- Falls back to an optional `@lumixland/ffmpeg-binaries` package that ships prebuilt platform binaries.
 - Minimal runtime surface: resolves a binary path and runs `ffmpeg` with arguments.
 
 Installation
 
-This package declares `@lumix/ffmpeg-binaries` as a peer dependency. To ensure the binaries are available at runtime, install both packages in your application:
+This package declares `@lumixland/ffmpeg-binaries` as a peer dependency. To ensure the binaries are available at runtime, install both packages in your application:
 
 ```powershell
-pnpm add @lumix/ffmpeg @lumix/ffmpeg-binaries
+pnpm add @lumixland/ffmpeg @lumixland/ffmpeg-binaries
 ```
 
-If you already have `ffmpeg` installed on the host system, installing `@lumix/ffmpeg-binaries` is optional.
+If you already have `ffmpeg` installed on the host system, installing `@lumixland/ffmpeg-binaries` is optional.
 
 Quick usage
 
 ```ts
-import ffmpeg from "@lumix/ffmpeg";
+import ffmpeg from "@lumixland/ffmpeg";
 
 async function convert() {
   const path = await ffmpeg.resolveFFmpegBinary();
@@ -37,7 +37,7 @@ The package exposes a small, focused runtime surface: a set of convenience conve
 
 Top-level exports (from package root)
 
-- `resolveFFmpegBinary(): Promise<string>` — Resolve a usable ffmpeg binary. Returns the system `ffmpeg` command if available, otherwise attempts to load `@lumix/ffmpeg-binaries` and return its `ffmpegPath` export. Throws when no binary is found.
+- `resolveFFmpegBinary(): Promise<string>` — Resolve a usable ffmpeg binary. Returns the system `ffmpeg` command if available, otherwise attempts to load `@lumixland/ffmpeg-binaries` and return its `ffmpegPath` export. Throws when no binary is found.
 - `runFFmpeg(args: string[], options?: { cwd?: string }): Promise<string>` — Run ffmpeg with the given arguments. Resolves with the collected stderr output when ffmpeg exits with code 0, rejects with an Error otherwise.
 
 Converters
@@ -75,5 +75,5 @@ Types
 
 Notes
 
-- The `@lumix/ffmpeg-binaries` package is declared as an optional peer dependency so consumers can decide whether to include it. When using pnpm workspaces, the workspace reference will ensure local linking.
+- The `@lumixland/ffmpeg-binaries` package is declared as an optional peer dependency so consumers can decide whether to include it. When using pnpm workspaces, the workspace reference will ensure local linking.
 - TypeScript users: local declaration files improve DX when importing the binaries package dynamically.

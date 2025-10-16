@@ -4,7 +4,7 @@ import { spawn } from "node:child_process";
  * Resolve a usable ffmpeg binary path.
  *
  * The function first tries to call the system `ffmpeg` command. If that fails
- * it will attempt to dynamically import the bundled `@lumix/ffmpeg-binaries`
+ * it will attempt to dynamically import the bundled `@lumixland/ffmpeg-binaries`
  * package and return its `ffmpegPath` export.
  *
  * @throws {Error} If no usable ffmpeg binary is found.
@@ -19,7 +19,7 @@ export async function resolveFFmpegBinary(): Promise<string> {
     return "ffmpeg";
   } catch {
     try {
-      const pkg = await import("@lumix/ffmpeg-binaries");
+      const pkg = await import("@lumixland/ffmpeg-binaries");
       const ffmpegPath = (pkg &&
         (pkg.ffmpegPath ?? pkg.default?.ffmpegPath)) as string | undefined;
       if (ffmpegPath) return ffmpegPath;
@@ -28,7 +28,7 @@ export async function resolveFFmpegBinary(): Promise<string> {
     }
 
     throw new Error(
-      "FFmpeg not found. Please install ffmpeg or include @lumix/ffmpeg-binaries.",
+      "FFmpeg not found. Please install ffmpeg or include @lumixland/ffmpeg-binaries.",
     );
   }
 }

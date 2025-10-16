@@ -20,7 +20,7 @@ importers:
 
   packages/ffmpeg:
     dependencies:
-      '@lumix/ffmpeg-binaries':
+      '@lumixland/ffmpeg-binaries':
         specifier: workspace:*
         version: link:../ffmpeg-binaries
     devDependencies:
