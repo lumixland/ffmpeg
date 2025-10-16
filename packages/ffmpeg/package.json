@@ -1,0 +1,50 @@
+{
+  "name": "@lumix/ffmpeg",
+  "version": "0.1.0",
+  "description": "A lightweight, dependency-free Node.js FFmpeg wrapper for fast and simple audio/video conversion.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "BSD-3-Clause",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "lint": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@lumix/ffmpeg-binaries": "workspace:*"
+  },
+  "peerDependenciesMeta": {
+    "@lumix/ffmpeg-binaries": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lumixland/ffmpeg.git"
+  },
+  "homepage": "https://github.com/lumixland/ffmpeg#readme",
+  "bugs": {
+    "url": "https://github.com/lumixland/ffmpeg/issues"
+  },
+  "keywords": [
+    "ffmpeg",
+    "audio",
+    "video",
+    "converter",
+    "typescript",
+    "node"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.8.0"
+  }
+}
