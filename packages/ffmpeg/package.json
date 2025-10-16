@@ -21,7 +21,7 @@
     "lint": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@lumixland/ffmpeg-binaries": "workspace:*"
+    "@lumixland/ffmpeg-binaries": "^0.1.0"
   },
   "peerDependenciesMeta": {
     "@lumixland/ffmpeg-binaries": {
